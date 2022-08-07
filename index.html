@@ -5,6 +5,8 @@
     <title>Card Game</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
   </head>
   <body>
    
@@ -111,10 +113,20 @@
             </div>
         </div>
 
-       
+        <div class="game-info">
+            <div class="statusbar">
+                <div class="bar"></div>
+                <div class="fillbar"></div>
+            </div>
+            <div class="flipinfo">
+                <div class="box">
+                    <div id="percentage">0%</div>
+                    <div><i class="material-icons replay" style="padding-top: 5px;">refresh</i></div>
+                    <div id="flipscore">flips:0</div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    
     <script src="script.js"></script>
   </body>
 </html>

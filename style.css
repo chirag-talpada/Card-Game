@@ -40,7 +40,6 @@ body{
     justify-items: center;
     margin: 20px auto;
     gap: 15px;
-    margin-right: 5px;
     position: relative;
 }
 
@@ -117,3 +116,71 @@ body{
   }
 }
 
+.game-info{
+  display: flex;
+}
+
+.statusbar,.flipinfo{
+  width: 50%;
+  padding: 5px;
+}
+
+.statusbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar{
+  height: 5px;
+  width: 100%;
+  background-color: #ddd4d4;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.fillbar{
+  height: 5px;
+  background: #6563FF;
+  border-radius: 10px;
+  position: absolute;
+  transition: 0.7s ease-in-out;
+  left: 0;
+}
+
+.material-icons{
+  cursor: pointer;
+}
+
+.material-icons:hover{
+  color: #6563FF;
+}
+
+@media only screen and (max-width: 700px) {
+  .card{
+    height: 75px;
+    width: 75px;
+  }
+}
+
+@media only screen and (max-width: 424px) {
+  .card{
+    height: 60px;
+    width: 60px;
+  }
+  .cards{
+    gap:10px;
+  }
+  
+  .wrapper{
+    padding: 10px 20px;
+  }
+
+}
