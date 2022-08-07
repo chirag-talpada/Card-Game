@@ -2,6 +2,9 @@ const cards=document.querySelectorAll('.card');
 let cardOne,cardTwo;
 let openCard=false;
 let match=0;
+const wrongAudio=new Audio('./effect/wrong_card.wav');
+const rightAudio=new Audio('./effect/right_card.wav');
+const winAudio=new Audio('./effect/win.mp3');
 
 function flipCard({target: clickedCard}){
     
@@ -22,20 +25,31 @@ function macthcard(img1,img2){
         match++;
         if(match===8){
             setTimeout(()=>{
+                winAudio.play();
+                setTimeout(()=>{
+                    winAudio.pause();
+                },3000);
                 return shufflecard();
             },1000)
+
+            
         }
         cardOne.removeEventListener("click",flipCard);
         cardTwo.removeEventListener("click",flipCard);
         cardOne.style.cursor="default";
         cardTwo.style.cursor="default";
-        cardOne = cardTwo = "";              
+        cardOne = cardTwo = "";  
+        setTimeout(()=>{
+            rightAudio.pause();
+            rightAudio.play();            
+        },400);
         return openCard=false;
     }
 
     setTimeout(()=>{
         cardOne.classList.add("shake");
         cardTwo.classList.add("shake");
+        wrongAudio.play();
     },500);
     
     setTimeout(()=>{
