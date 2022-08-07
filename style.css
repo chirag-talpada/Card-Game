@@ -41,6 +41,7 @@ body{
     margin: 20px auto;
     gap: 15px;
     position: relative;
+    user-select: none;
 }
 
 .card{
@@ -49,6 +50,7 @@ body{
     cursor: pointer;
     width: 90px;
     height: 90px;
+    user-select: none;
 }
 
 .view {

@@ -15,7 +15,9 @@ async function hurrey(){
         confettiNumber: 200,
         emojiSize: 40
     });
-     window.location.reload();
+    setTimeout(()=>{
+        window.location.reload();
+    },3000);
 }
 
 function flipCard({target: clickedCard}){
@@ -50,9 +52,6 @@ function macthcard(img1,img2){
             setTimeout(()=>{
                 winAudio.play();
                 hurrey();
-                setTimeout(()=>{
-                    winAudio.pause();
-                },2000);
                 return shufflecard();
             },1000)   
         }
